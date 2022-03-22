@@ -35,12 +35,14 @@ console.log('======================');
 // 4a
 let harryPotterMovies = 0;
 
-// 4b & 4c
-while (harryPotterMovies <=8) {
-    console.log(harryPotterMovies);
+// 4b
+while (harryPotterMovies <= 7) {
+    // console.log(harryPotterMovies);
     harryPotterMovies++;
 };
 
+// 4c
+console.log(harryPotterMovies); 
 
 console.log('======================');
 
@@ -54,10 +56,10 @@ const hogwartsHouses = [
 ];
 
 // 5b
-for (category of hogwartsHouses.slice(0,1)){
-   /* for (?? of category){
-      console.log(??);
-    }*/
+for (list of hogwartsHouses){
+  for (letters of list){
+      console.log(letters);
+    }
   } 
 
   console.log('======================');
@@ -70,11 +72,26 @@ const quote = [
     `Harry`
 ];
 
-
-
 // 6b
+let magicQuote = ``;
+for (i = 0; i < quote.length; i++){
+  magicQuote+= ` ${quote[i]}`;
+}
+magicQuote = magicQuote.trim();
+console.log(magicQuote);
 
+console.log('======================');
 
 // 7
-
-
+// Inspired by FizzBuzz
+for (i = 1; i <= 25; i++){
+  if (i % 3 === 0 && i % 5 === 0){
+    console.log(`Expecto Patronum`);
+  } else if (i % 3 === 0){
+    console.log(`Expecto`);
+  } else if (i % 5 === 0){
+    console.log(`Patronum`);
+  } else {
+    console.log(i);
+  }
+}
